@@ -1,0 +1,2 @@
+[17-May-2016 03:51:14 UTC] PHP Fatal error:  Trait 'Illuminate\Foundation\Auth\Access\AuthorizesRequests' not found in /home1/anthopd6/public_html/webdev/outtadebt/app/Http/Controllers/Controller.php on line 13
+[17-May-2016 03:51:21 UTC] PHP Fatal error:  Trait 'Illuminate\Foundation\Auth\Access\AuthorizesRequests' not found in /home1/anthopd6/public_html/webdev/outtadebt/app/Http/Controllers/Controller.php on line 13

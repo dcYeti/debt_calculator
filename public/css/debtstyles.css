@@ -1,0 +1,62 @@
+span.whitetext_nav {
+	color: white;
+	font-size: 18px;
+	margin-right: 6px;
+	vertical-align: bottom;
+}
+
+button#button_left {
+	background-color: rgb(123,104,238);
+	margin-left: 20px;
+	margin-top: 50px;
+	font-size: 20px;
+	
+}
+
+div.modal_container{
+	display: none;
+	position: fixed;
+	z-index: 50;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(150,150,150, 0.7);
+}
+
+div.modal_content{
+	z-index: 51;
+	background-color: rgb(248,248,255);
+	margin: 5% auto;
+	min-width: 800px;
+	width: 90%;
+	height: 83%;
+	border: 2px solid;
+	position: relative;
+	overflow: auto;
+	padding: 5px;
+}
+
+span.modal_close{
+	background-color: rgb(255,245,238);
+	color: rgb(0,0,0);
+	text-align: right;
+	right: 210px;
+	position:absolute;
+	padding: 5px;
+	border: 1px solid rgb(0,0,0);
+	cursor: pointer;
+}
+
+span.modal_close_hi{
+	background-color: rgb(240,255,255);
+	color: rgb(0,0,0);
+	text-align: right;
+	right: 210px;
+	position:absolute;
+	padding: 5px;
+	border: 3px solid rgb(0,0,0);
+	cursor: pointer;
+
+}
