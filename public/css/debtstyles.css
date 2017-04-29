@@ -13,6 +13,10 @@ button#button_left {
 	
 }
 
+#custom_submit {
+	background-color: rgb(123,104,238);
+}
+
 div.modal_container{
 	display: none;
 	position: fixed;
@@ -59,4 +63,8 @@ span.modal_close_hi{
 	border: 3px solid rgb(0,0,0);
 	cursor: pointer;
 
+}
+
+p.custom_front {
+	font-size: 18px;
 }
