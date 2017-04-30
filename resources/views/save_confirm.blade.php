@@ -48,7 +48,9 @@
         <h1>The Get Outta Debt Calculator</h1>
         <p class="lead">Thanks.  Your profile has been saved.</p>
 		<p class="lead">You can now access your debt assessment by entering your profileID in the home page.</p>
-		<p class="lead">Your Profile ID is {{$profID}}, which we've also sent to {{$uEmail}}</p>
+		<p class="lead">Your Profile ID is {{$profID}}.  <br/>You can also access directly with this URL: <br/>
+    http://webdev.anthonyahn.com/outtadebt/public/index.php/loadprofile?idSubmit={{$profID}}</p>
+    <p class="lead">{{$uEmail}}</p>
 		<button class="btn btn-primary" onclick="closeTab()">Return to Debt Assessment</button>
 		</div>		
       </div>	

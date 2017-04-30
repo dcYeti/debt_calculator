@@ -47,7 +47,7 @@
 		<p></p>
 	</div>
 		<h1><span class="label label-warning">Step 2: Enter Your Debts ({{$noDebts}})</span></h1>
-		<h3>Enter your debts (in any order) and their current information to start your initial calculation</h3>
+		<h3>Enter your debts (in any order) and their current information</h3>
 
 	<form name="debts_pg2" action="calc_initial" enctype="multipart/form-data" onsubmit="return validateDebts({{$noDebts}},{{$moCommit}})" method="post">	
 		<!--The following line will run the loop with blade template -->
@@ -71,7 +71,7 @@
 		<br/>		
 		</div>
 	@endfor	
-		<button type="submit" name = "smit" class="btn btn-default" id="button_left">Start Initial Calculation</button>
+		<button type="submit" name = "smit" class="btn btn-default" id="button_left">Start Calculation</button>
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		</div>
 	</form>
@@ -83,6 +83,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{asset('../../bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/add_highlights.js')}}"></script>
   </body>
 </html>
 		

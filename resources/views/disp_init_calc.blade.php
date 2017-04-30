@@ -82,8 +82,9 @@
 		<h2><span class="label label-primary">Save this Debt Assessment --></h2></span>
 		<p>Enter Your E-mail address, and we'll e-mail you a ProfileID you can use to look up this debt assessment in the future
 		 (confirmation opens in new browser tab or window)</p>
-		<input type="email" class="form-control" name = "user_email" required placeholder="example@ISP.com" />
-		<h3><input type="submit" class="btn btn-primary" name="smit" value="Save Assessment"></h3>
+		<input type="email" class="form-control" name = "user_email" placeholder="example@ISP.com" />
+		<h3><input type="submit" class="btn btn-success" name="smit" value="Save Assessment with E-Mail">
+		    <input type="submit" class="btn btn-success" name="smit" value="Continue without E-Mail"</h3>
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	</form>	
 	

@@ -5,4 +5,4 @@ Homestead.yaml
 Homestead.json
 .env
 
-/app/Includes/dbConfig.php
+/app/Includes/db_connect.php

@@ -8,7 +8,7 @@
     <title>Outtadebt Calculator</title>
 
     <!-- Bootstrap -->
-    <link href="{{asset('../../bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{asset('../../bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
 	<link href="{{asset('../../jumbotron.css')}}" rel="stylesheet" type="text/css">
 	<link href="{{asset('css/debtstyles.css')}}" rel="stylesheet" type="text/css">>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -31,6 +31,7 @@
            <span class="icon-bar"></span>
          </button>
 		 <a class="navbar-brand" href="../">Home</a>
+     <a class="navbar-brand" href="https://github.com/dcYeti/debt_calculator">View the open source repository</a>
           </div>
         <div id="navbar" class="navbar-collapse collapse">
           
@@ -41,21 +42,33 @@
 	  <div class="container">
 		<br/><br/><br/>
 		<div class="page-header">
-        <h1>The Get Outta Debt Calculator</h1>
-		<h3><u>The Ladder Methodology to Paying Debt</u></h3>
-        <p class="lead">The ladder methodology to paying debt is the mathematically-proven best way to pay off your debts
-		across multiple accounts.  Instead of paying $10 more here and there while paying your accounts, or paying the accounts
-		with the highest balances, the ladder method assigns your highest APR debt as the priority.  The idea is that you pay 
-		the monthly minimum for all non-priority accounts, and then use any extra money towards the highest APR account.  
-		After that account is paid, the priority will move towards the next	highest APR account until all debts are gone.  Of course,
-		the calculation assumes that no new debt is added to these accounts along the way.<br/><br/>
-		<h3><u>About the Calculator</u></h3>
-        <p class="lead">The calculator automatically prioritizes your accounts for you.  It then details which debts to pay first,
-		and which ones to only pay the monthly minimum.  The calculator automatically calculates your future monthly minimum payments. 
-		After calculation, you can view month-by-month analysis of each account.<br/>
-		Warning:  There is not a whole lot of exception handling on this app.  We're assuming your debts are lawful, and that you
-		pay at least a little bit if principal each month.  Furthermore, this calculator cannot handle variable APR or accounts
-		with APR that changes after certain periods of time.<br/><br/>
+    <h2>The Get Outta Debt Calculator</h2>
+
+    <h3><u>What it Does</u></h3>
+        <p class="custom_front">This calculator computes the length of time and total interest paid for multiple debts with different
+        interest rates.  This uses the "avalanche method" of paying multiple debts.  You are asked information about your debts and how
+        much you commit every month towards your debts.</p>
+ 
+        <p class="custom_front">Then, the calculator pays all the minimum payments each month and gives any excess towards the highest-interest
+        balances.  This, of course, assumes that the interest rate will not fluctuate during the payment period.  You are then given a month-to-month detail of how your monthly payment is used and the total interest paid and time taken. </p>
+
+    <h3><u>The Avalanche Method of Paying Debt </u></h3>
+		    <p class="custom_front">The Avalanche method is mathematically proven to be the best choice for paying off multiple debts.  However,
+        anecdotally, the snowball method is sometimes deemed more effective.  This method puts any excess payments towards the smallest
+        balances - the idea being that the psychological bump of paying off accounts increases discipline towards your goal.</p>
+		
+    <h3><u>Calculator Accuracy</u></h3>
+        <p class="custom_front">The calculator is accurate as long as the interest rates do not fluctuate during the repayment period.  Also,
+        this assumes that no new purchases or advances are taken on those credit lines.  This also assumes that minimum payment is a fixed
+        percentage of the statement balance and that the minimum payment will change incrementally every month.  However, in practice this
+        varies account by account.  Many companies like to round minimum payments to be more consumer-friendly.</p>
+
+        <p class="custom_front">You may also notice in your monthly detail that there may be small amounts remaining even after the calculator determines an account to be paid.  This is because some credit lines will charge you the accumulated interest for the month you pay off your bill.  This varies by creditor, but for our purposes we assume that you are charged and consider those amounts negligible.</p>
+
+    <h3><u>Open Source</u></h3>
+        <p class="custom_front">This calculator is open source <a href="https://github.com/dcYeti/debt_calculator"> View the Repository </a>.  
+        I currently plan on including a calculator to handle the snowball method of debt repayment, as well as add features such as improving
+        debt repayment plans by using debt reconsolidation or by increasing your monthly contribution.  Thanks for checking this out!</p>
 		</div>		
       </div>	
 </div>	

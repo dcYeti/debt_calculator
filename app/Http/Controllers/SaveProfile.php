@@ -103,8 +103,21 @@ class SaveProfile extends Controller
 		You can also use this URL: http://webdev.anthonyahn.com/outtadebt/public/index.php/loadprofile?idSubmit=$profileID
 		Thanks again for using the outtadebt calculator!";
 		$mailHeader = "From: outtadebt_calc@anthonyahn.com";
-		mail($mailTo, $mailSubject, $mailBody, $mailHeader);
-		
+		if (empty($_POST['user_email']) && $_POST['smit'] == "Save Assessment with E-Mail") {
+			$userEmail = "Sorry, no E-mail address was entered.  We could not send an e-mail to you at this time";
+		}
+		if ($mailServerSetup && $_POST['smit'] == "Save Assessment with E-Mail") {
+			//mail($mailTo, $mailSubject, $mailBody, $mailHeader);
+			$userEmail = "We have also e-mailed you your profile ID at $userEmail";
+		}
+		else if($_POST['smit'] == "Save Assessment with E-Mail") {
+			$userEmail = "Sorry, the e-mail server is having problems or not properly configured.  We could not send you an e-mail at this time";
+		}
+		else {
+			$userEmail = '';
+		}
+
+
 		//Call view
 		return view('save_confirm',array('profID'=>$profileID, 'uEmail'=>$userEmail));
 		

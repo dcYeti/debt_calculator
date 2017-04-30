@@ -33,7 +33,8 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-		 <a class="navbar-brand" href="index.php/ladder_method">About the Ladder Methodology</a>
+		 <a class="navbar-brand" href="index.php/ladder_method">About the Calculator</a>
+     	<a class="navbar-brand" href="https://github.com/dcYeti/debt_calculator">View the open source repository</a>
           </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" action="index.php/loadprofile" method="get">
@@ -52,26 +53,24 @@
 		<div class="page-header">
         <h1>The Get Outta Debt Calculator</h1>
         <p class="lead">Hi.  The get outtadebt calculator is a detailed debt calculation tool that
-		allows users to enter in any amount of debts.  Then, it calculates the fastest way to pay those debts
-		by paying higher APR debts first.  It works with any kind of debt as long as it's APR remains fixed,
+		allows users to enter in any amount of debts and see how long it will take to pay off.  
+		The calculation is accurate with any kind of debts as long as it's APR remains fixed,
 		and no further debts are added during the repayment period.</p>
 		<p></p>
 		</div>
 		<h1><span class="label label-primary">Start Here</span></h1>
 		
 		<!-- Begin form area column 1 for name and income-->
-		<h3>Let us know what to call you and about your debts.</h3>
 		<div class="col-md-6">
 	<form name="user_pg1" action="index.php/add_debts" enctype="multipart/form-data" onsubmit="return validateIncome()" method="post">	
 		<label for="nameofuser">Enter your name:</label>
-		<input type="text" class="form-control" id="nameofuser" name = "username" placeholder="We need to call you something, John, Godzilla, doesnt matter...">
+		<input type="text" class="form-control" id="nameofuser" name = "username" placeholder="Give us something to call you">
 		<br/>
 		<label for="numberdebts">How many debt accounts do you want to add:</label>
-		<p>Enter how many debt accounts you want to enter (this can be credit card, auto, student loan, or any with a fixed apr and monthly obligation).  
-		Exclude home mortgage, as that will be considered a monthly mandatory costs.</p>
+		<p>Enter how many debt accounts you want to calculate.</p>
 		<input type="text" class="form-control" id="numberdebts" name = "debtcount" placeholder="Numbers only please">
 		<br/>
-		<label for="commitment">Enter your average monthly commitment to pay off debt (for all accounts)</label>
+		<label for="commitment">Enter your monthly commitment to pay off debt (for all accounts listed above)</label>
 		<p>Add up all the money paid towards debt per month.</p>
 		<input type="text" class="form-control" id="commitment" name = "monthly_commitment" placeholder="Numbers only please">
 		<br/>
@@ -91,5 +90,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{asset('../../bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/add_highlights.js')}}"></script>
   </body>
 </html>

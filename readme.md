@@ -1,3 +1,44 @@
+#The outtadebt Project  (for Laravel documentation read below)
+
+This is a debt repayment calculator that considers multiple lines of credit with different, but fixed interest rates.  <br/>
+By using the avalanche method of paying higher-interest balances first, the calculator shows how long it will take to pay down
+all debts and how much total interest will be paid.
+
+##Getting Started
+
+This is a PHP 5 application built using the Laravel MVC framework.  You will need to have a laravel installation via Composer.  For more
+information on how to configure a Laravel installtion, please see below.
+
+##Prerequisites
+PHP installation, MySQL server, Laravel installation, Twitter's Bootstrap, JQuery (included with bootstrap)
+
+##Installation
+After download, there are a some adjustments to make.<br/>
+1) Configure Twitter Bootstrap.  It is essential to the general look of the calculator.  The current settings are shown below and assume that the laravel installation and bootstrap directory are both in the root directory.  Currently, they are set like this:<br/>
+
+  	<link href="{{asset('../../bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"> <br/>
+	<link href="{{asset('../../jumbotron.css')}}" rel="stylesheet" type="text/css">  <br/> 
+
+For a different location, you will have to change the path on each of the views in the "resources/views/" directory.
+
+2) Enter your database and mail server settings in the db_connect.php located in "app/Includes" directory.  A template is provided, with the user needing to define the database constants.  The calculator uses PHP's mail() function to e-mail users their debt profile once completed. <br/>
+
+	//Fill in your MySQL settings
+	DEFINE('DB_USER', 'username');					//MySQL database username	<br/>
+	DEFINE('DB_PASS', 'password');					//MySQL database password	<br/>
+	DEFINE('DB_HOST', 'localhost');					//Host - usually this is localhost <br/>
+	DEFINE('DB_NAME', 'outtadebtDB');				//MySQL database name (your host may require prefixes) <br/>
+
+	You will also see the ability to set if you have a working mail server.  THe calculator uses PHP's mail function to e-mail users their profile IDs to access their debt profile at any time.  With the below variable set to false, the program will not execute the mail function:<br/>
+
+	$mailServerSetup = false;  <-- set to false if you don't have a mail server setup (eg while working locally).  Set to true if you do have one set up.
+
+
+The template is named "db_connect(sample).php" - This file will have to be renamed to "db_connect.php" in order for the program to use these settings
+
+##Contribution
+I plan to add the ability to pay debts using the "snowball" method.  However, I am currently working on other profjects.  I will gladly accept any contributions to creating a controller class to handle debt repayment using this option.
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
