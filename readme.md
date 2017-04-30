@@ -22,13 +22,13 @@ After download, there are a some adjustments to make.<br/>
 For a different location, you will have to change the path on each of the views in the "resources/views/" directory.
 
 2) Enter your database and mail server settings in the db_connect.php located in "app/Includes" directory.  A template is provided, with the user needing to define the database constants.  The calculator uses PHP's mail() function to e-mail users their debt profile once completed. <br/>
-
-	//Fill in your MySQL settings
-	DEFINE('DB_USER', 'username');					//MySQL database username	<br/>
-	DEFINE('DB_PASS', 'password');					//MySQL database password	<br/>
-	DEFINE('DB_HOST', 'localhost');					//Host - usually this is localhost <br/>
-	DEFINE('DB_NAME', 'outtadebtDB');				//MySQL database name (your host may require prefixes) <br/>
-
+```
+	//Fill in your MySQL settings 
+	DEFINE('DB_USER', 'username');					//MySQL database username	
+	DEFINE('DB_PASS', 'password');					//MySQL database password	
+	DEFINE('DB_HOST', 'localhost');					//Host - usually this is localhost 
+	DEFINE('DB_NAME', 'outtadebtDB');				//MySQL database name (your host may require prefixes) 
+```
 	You will also see the $mailServerSetup variable.  The calculator uses PHP's mail function to e-mail users their profile IDs to access their debt profile at any time.  With the below variable set to false, the program will not execute the mail function:<br/>
 
 	$mailServerSetup = false;  <-- set to false if you don't have a mail server setup (eg while working locally).  Set to true if you do have one set up.
