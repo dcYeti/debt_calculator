@@ -15,10 +15,10 @@ PHP installation, MySQL server, Laravel installation, Twitter's Bootstrap, JQuer
 ##Installation
 After download, there are a some adjustments to make.<br/>
 1) Configure Twitter Bootstrap.  It is essential to the general look of the calculator.  The current settings are shown below and assume that the laravel installation and bootstrap directory are both in the root directory.  Currently, they are set like this:<br/>
-
-  	<link href="{{asset('../../bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"> <br/>
-	<link href="{{asset('../../jumbotron.css')}}" rel="stylesheet" type="text/css">  <br/> 
-
+```
+  	<link href="{{asset('../../bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"> 	
+	<link href="{{asset('../../jumbotron.css')}}" rel="stylesheet" type="text/css">  					
+```
 For a different location, you will have to change the path on each of the views in the "resources/views/" directory.
 
 2) Enter your database and mail server settings in the db_connect.php located in "app/Includes" directory.  A template is provided, with the user needing to define the database constants.  The calculator uses PHP's mail() function to e-mail users their debt profile once completed. <br/>
@@ -29,7 +29,7 @@ For a different location, you will have to change the path on each of the views 
 	DEFINE('DB_HOST', 'localhost');					//Host - usually this is localhost <br/>
 	DEFINE('DB_NAME', 'outtadebtDB');				//MySQL database name (your host may require prefixes) <br/>
 
-	You will also see the ability to set if you have a working mail server.  THe calculator uses PHP's mail function to e-mail users their profile IDs to access their debt profile at any time.  With the below variable set to false, the program will not execute the mail function:<br/>
+	You will also see the $mailServerSetup variable.  The calculator uses PHP's mail function to e-mail users their profile IDs to access their debt profile at any time.  With the below variable set to false, the program will not execute the mail function:<br/>
 
 	$mailServerSetup = false;  <-- set to false if you don't have a mail server setup (eg while working locally).  Set to true if you do have one set up.
 
